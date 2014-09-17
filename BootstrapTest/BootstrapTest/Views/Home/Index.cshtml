@@ -1,0 +1,1259 @@
+﻿
+@*@{
+    ViewBag.Title = "Index";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+<!DOCTYPE html >
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap</title>
+  <!-- Google Font: Open Sans -->
+  @*<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic"/>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700"/>*@
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="@Url.Content("~/bootstrap/css/font-awesome.min.css")" type="text/css"/>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="@Url.Content("~/bootstrap/css/bootstrap.css")"  type="text/css" />
+  
+  <!-- Plugin CSS -->
+  <link rel="Stylesheet" href="@Url.Content("~/bootstrap/plugins/magnific-popup.css")" type="text/css" />
+  <link rel="Stylesheet" href="@Url.Content("~/bootstrap/plugins/dataTables.bootstrap.css")" type="text/css" />
+  <link rel="Stylesheet" href="@Url.Content("~/bootstrap/plugins/bootstrap-datetimepicker.css")" type="text/css" />
+
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="@Url.Content("~/bootstrap/css/mvpready-admin.css")" type="text/css"/>
+  <link rel="stylesheet" href="@Url.Content("~/bootstrap/css/mvpready-flat.css")" type="text/css"/>
+
+  <!--My own CSS-->
+  <link rel="Stylesheet" href="@Url.Content("~/bootstrap/css/main.css")" type="text/css" />
+  
+
+
+
+
+  <!-- Core JS -->
+  <script src="@Url.Content("~/Scripts/jquery-1.11.1.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/js/bootstrap.js")" type="text/javascript"></script>
+  
+  <!-- App JS -->
+  <script src="@Url.Content("~/bootstrap/js/mvpready-core.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/js/mvpready-admin.js")" type="text/javascript"></script>
+
+  <!-- Plugin JS -->
+  <script src="@Url.Content("~/bootstrap/plugins/jquery.magnific-popup.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/plugins/jquery.dataTables.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/plugins/dataTables.bootstrap.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/plugins/bootstrap-datetimepicker.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/bootstrap/plugins/bootstrap-datetimepicker.zh-CN.js")" type="text/javascript"></script>
+
+  <!--My own JS-->
+  @*<script>      var MyWebUrlSettings = {HomeSearchGoals:'@Url.Action("SearchGoals","Home")'}</script>*@
+  <script src="@Url.Content("~/Scripts/Homemain.js")" type="text/javascript"></script>
+</head>
+
+<body class="">
+  <div class="navbar navbar-inverse" role="banner">
+    
+    <div class="container">
+
+      <div class="navbar-header">
+        <!--收缩时的下拉按钮-->
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-cog"></i>
+        </button>
+        
+        <!--Logo位置和链接-->
+        <a href="./" class="navbar-brand navbar-brand-img">
+          <img src="../bootstrap/img/logo.png" alt="MVP Ready">
+        </a>
+      </div> <!-- /.navbar-header -->
+
+
+      <nav class="collapse navbar-collapse " role="navigation">
+
+        <ul class="nav navbar-nav noticebar navbar-left">
+          
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-plus-square"></i>
+              <span class="navbar-visible-collapsed">&nbsp;添加记录&nbsp;</span>
+            </a>
+
+            <ul class="dropdown-menu noticebar-menu noticebar-hoverable" role="menu">                
+              <li class="nav-header">
+                <div class="pull-left">
+                  添加记录
+                </div>
+
+                <div class="pull-right">
+                  <a href="javascript:;">New Message</a>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" class="noticebar-item">
+                  <span class="noticebar-item-image">
+                    <img src="../img/avatars/avatar-1-md.jpg" style="width: 50px" alt="">
+                  </span>
+
+                  <span class="noticebar-item-body">
+                    <strong class="noticebar-item-title">血糖自测</strong>
+                    <span class="noticebar-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
+                    <span class="noticebar-item-time"><i class="fa fa-clock-o"></i> 20 minutes ago</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="noticebar-item">
+                  <span class="noticebar-item-image">
+                    <img src="../img/avatars/avatar-2-md.jpg" style="width: 50px" alt="">
+                  </span>
+
+                  <span class="noticebar-item-body">
+                    <strong class="noticebar-item-title">用药记录</strong>
+                    <span class="noticebar-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</span>
+                    <span class="noticebar-item-time"><i class="fa fa-clock-o"></i> 5 hours ago</span>
+                  </span>
+                </a>
+              </li>
+
+              <li class="noticebar-menu-view-all">
+                <a href="#">View All Messages</a>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell"></i>
+              <span class="navbar-visible-collapsed">&nbsp;提醒提示&nbsp;</span>
+              <span class="badge badge-primary">3</span>
+            </a>
+
+            <ul class="dropdown-menu noticebar-menu noticebar-hoverable" role="menu">
+              <li class="nav-header">
+                <div class="pull-left">
+                  提醒提示
+                </div>
+
+                <div class="pull-right">
+                  <a href="javascript:;">Mark as Read</a>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" class="noticebar-item">
+                  <span class="noticebar-item-image">
+                    <i class="fa fa-cloud-upload text-success"></i>
+                  </span>
+                  <span class="noticebar-item-body">
+                    <strong class="noticebar-item-title">Templates Synced</strong>
+                    <span class="noticebar-item-text">20 Templates have been synced to the Mashon Demo instance.</span>
+                    <span class="noticebar-item-time"><i class="fa fa-clock-o"></i> 12 minutes ago</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="noticebar-item">
+                  <span class="noticebar-item-image">
+                    <i class="fa fa-ban text-danger"></i>
+                  </span>
+                  <span class="noticebar-item-body">
+                    <strong class="noticebar-item-title">Sync Error</strong>
+                    <span class="noticebar-item-text">5 Designs have been failed to be synced to the Mashon Demo instance.</span>
+                    <span class="noticebar-item-time"><i class="fa fa-clock-o"></i> 20 minutes ago</span>
+                  </span>
+                </a>
+              </li>
+
+              <li class="noticebar-menu-view-all">
+                <a href="#">View All Notifications</a>
+              </li>
+            </ul>
+          </li>
+         
+        </ul>
+
+
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown navbar-profile">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+              <img src="./img/avatars/avatar-1-xs.jpg" class="navbar-profile-avatar" alt="">
+              <span class="navbar-profile-label">rod@rod.me &nbsp;</span>
+              <i class="fa fa-caret-down"></i>
+            </a>
+
+            <ul class="dropdown-menu" role="menu">
+
+              <li>
+                <a href="./page-profile.html">
+                  <i class="fa fa-user"></i> 
+                  &nbsp;&nbsp;My Profile
+                </a>
+              </li>
+
+              <li>
+                <a href="./page-pricing.html">
+                  <i class="fa fa-dollar"></i> 
+                  &nbsp;&nbsp;Plans & Billing
+                </a>
+              </li>
+
+              <li>
+                <a href="./page-settings.html">
+                  <i class="fa fa-cogs"></i> 
+                  &nbsp;&nbsp;Settings
+                </a>
+              </li>
+
+              <li class="divider"></li>
+
+              <li>
+                <a href="./account-login.html">
+                  <i class="fa fa-sign-out"></i> 
+                  &nbsp;&nbsp;Logout
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+        </ul>
+
+
+
+
+
+      </nav>
+
+    </div> <!-- /.container -->
+
+  </div>
+  
+  
+  
+  
+
+  <div class="mainnav">
+
+    <div class="container">
+
+      <a class="mainnav-toggle" data-toggle="collapse" data-target=".mainnav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <nav class="collapse mainnav-collapse" role="navigation">
+
+        <ul class="mainnav-menu">
+          <!--controlmyself用来控制标签选中状态与否 -->
+          <li class="dropdown controlmyself " id="controlmyself">
+          	<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" >
+          	自我管理
+          	<i class="mainnav-caret"></i>
+          	</a>
+
+          	<ul class="dropdown-menu controlmyself" role="menu">
+              <li>
+                <a href="@Url.Content("~/TodayAlert/Index")">
+                <i class="fa fa-tasks"></i> 
+                &nbsp;&nbsp;今日任务
+                </a>
+              </li>
+
+              <li>
+                <a href="@Url.Content("~/Home/Index")">
+                <i class="fa fa-pencil-square-o"></i> 
+                &nbsp;&nbsp;目标计划
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-check-square-o"></i> 
+                &nbsp;&nbsp;达标情况
+                </a>
+              </li>
+          	</ul>
+          </li>
+
+
+          <li class="dropdown healthdocument" id="healthdocument">
+
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" >
+            健康档案
+            <i class="mainnav-caret"></i>					
+            </a>
+
+            <ul class="dropdown-menu healthdocument" role="menu">
+
+              <li>
+                <a href="#">
+                <i class="fa fa-bars"></i> 
+                &nbsp;&nbsp;Tabs &amp; Accordions
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-calendar-o"></i> 
+                &nbsp;&nbsp;Popups &amp; Alerts
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-check"></i> 
+                &nbsp;&nbsp;Validation
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-table"></i> 
+                &nbsp;&nbsp;Data Tables
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-picture-o"></i> 
+                &nbsp;&nbsp;Gallery
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-bar-chart-o"></i> 
+                &nbsp;&nbsp;Charts
+                </a>
+              </li>		  
+            </ul>
+          </li>
+
+
+          <li class="dropdown educationclass" id="educationclass">
+
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="c">
+            教育课堂
+            <i class="mainnav-caret"></i>
+            </a>
+
+            <ul class="dropdown-menu educationclass " role="menu">
+              <li>
+                <a href="#">
+                <i class="fa fa-money"></i> 
+                &nbsp;&nbsp;Plans & Billing
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-user"></i> 
+                &nbsp;&nbsp;Profile
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-cogs"></i> 
+                &nbsp;&nbsp;Settings
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                <i class="fa fa-question"></i> 
+                &nbsp;&nbsp;FAQ
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="dropdown mydoctor " id="mydoctor">
+
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="d">
+            我的医生
+            <i class="mainnav-caret"></i>
+            </a>
+
+            <ul class="dropdown-menu mydoctor" role="menu">
+              <li>
+                <a href="#">
+                <i class="fa fa-bell"></i> 
+                &nbsp;&nbsp;Notifications
+                </a>
+              </li>			
+
+              <li>
+                <a href="#">
+                <i class="fa fa-smile-o"></i> 
+                &nbsp;&nbsp;Font Icons
+                </a>
+              </li> 
+
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">
+                <i class="fa fa-ban"></i> 
+                &nbsp;&nbsp;Error Pages
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-ban"></i> 
+                    &nbsp;&nbsp;404 Error
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-ban"></i> 
+                    &nbsp;&nbsp;500 Error
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu">
+
+                <a tabindex="-1" href="#">
+                <i class="fa fa-lock"></i> 
+                &nbsp;&nbsp;Login Pages
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-unlock"></i> 
+                    &nbsp;&nbsp;Login
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-unlock"></i> 
+                    &nbsp;&nbsp;Login Social
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-star"></i> 
+                    &nbsp;&nbsp;Signup
+                    </a>
+                    </li>
+
+                  <li>
+                    <a href="#">
+                    <i class="fa fa-envelope"></i> 
+                    &nbsp;&nbsp;Forgot Password
+                    </a>
+                  </li>
+                </ul>
+              </li> 
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div> <!-- /.container -->
+
+  </div> <!-- /.mainnav -->
+
+
+
+
+  <div class="content">
+
+    <div class="container">
+
+      <div class="layout layout-main-right layout-stack-sm">
+
+        <div class="col-md-3 col-sm-4 layout-sidebar">
+
+          <div class="nav-layout-sidebar-skip">
+            <strong>标签导航</strong> / <a href="#settings-content">跳转到内容</a>	
+          </div>
+
+          <ul id="myTab" class="nav nav-layout-sidebar nav-stacked">
+              <li class="active">
+              <a href="#controlgoal-tab" data-toggle="tab">
+              <i class="fa fa-user"></i> 
+              &nbsp;&nbsp;控制目标
+              </a>
+            </li>
+
+            <li>
+              <a href="#bloodsugarmonitorplan-tab" data-toggle="tab">
+              <i class="fa fa-line-chart"></i> 
+              &nbsp;&nbsp;血糖监测计划
+              </a>
+            </li>
+
+            <li>
+              <a href="#medicineplan-tab" data-toggle="tab">
+              <i class="fa fa-medkit"></i> 
+              &nbsp;&nbsp;药物计划
+              </a>
+            </li>
+
+            <li>
+              <a href="#foodplan-tab" data-toggle="tab">
+              <i class="fa fa-cutlery"></i> 
+              &nbsp;&nbsp;饮食计划
+              </a>
+            </li>
+
+            <li>
+              <a href="#sportplan-tab" data-toggle="tab">
+              <i class="fa fa-soccer-ball-o"></i> 
+              &nbsp;&nbsp;运动计划
+              </a>
+            </li>
+
+            <li>
+              <a href="#regularinspectplan-tab" data-toggle="tab">
+              <i class="fa fa-stethoscope"></i> 
+              &nbsp;&nbsp;定期检查计划
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- /.col -->
+
+
+
+        <div class="col-md-9 col-sm-8 layout-main">
+
+          <div id="settings-content" class="tab-content stacked-content">
+
+            
+            
+            <div class="tab-pane fade in active" id="controlgoal-tab">
+
+              <h3 class="content-title"><u>血&nbsp;&nbsp;糖</u></h3>
+              <p></p>
+              <br><br>
+
+              <form action="#" class="form-horizontal">
+              
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">糖化血红蛋白</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是血液红细胞中的血红蛋白与葡萄糖结合的产物，一般来说血红蛋白被糖基化的比例与一段时间内血浆葡萄糖浓度的水平呈正比，因此能反映3个月内血糖控制的指标。理想：＜6.5%&nbsp;&nbsp;&nbsp;良好：6.5%～7.5%&nbsp;&nbsp;&nbsp;差：＞7.5%" data-original-title="糖化血红蛋白(HbA1c)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="HbA1c" name="user-name"  class="form-control" placeholder="≤6.5" style=" text-align:right"/>
+                    <span class="input-group-addon">%</span>
+                  </div>  <!-- /.col -->                                   
+                </div> <!-- /.form-group -->
+
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">空腹血糖</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="指空腹过夜8小时以上，早餐前采血测定的血糖值。中、晚餐前测定的血糖不能叫空腹血糖。理想：4.4～6.1mmol/L&nbsp;&nbsp;&nbsp;良好：≤7.0mmol/L&nbsp;&nbsp;&nbsp;差：＞7.0mmol/L" data-original-title="空腹血糖(FPG)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="FPG" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="FPGUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="FPGUnit1" >mmol/L</a></li>
+                        <li><a id="FPGUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">餐后2小时血糖</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="指早、中、晚餐后2小时测定的血糖。一般讲，餐后2小时是从进食第一口开始计时，而不是从进餐结束后才开始计时。但如果因各种原因进餐时间超过20分钟，可以从进餐过程中间点或进食第一口主食开始计时。理想：4.4～8.0mmol/L&nbsp;&nbsp;&nbsp;良好：≤10.0mmol/L&nbsp;&nbsp;&nbsp;差：＞10.0mmol/L" data-original-title="餐后2小时血糖(2hPPG)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="PPG" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="PPGUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown" >mmol/L<span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="PPGUnit1">mmol/L</a></li>
+                        <li><a id="PPGUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+
+
+                <br /><br />
+                <h3 class="content-title"><u>血&nbsp;&nbsp;压</u></h3>
+
+                <p></p>
+
+                <br><br>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">收缩压</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是当心脏收缩时，从心室射入的血液对血管壁产生的侧压力，这时血压最大；此时内壁的压力称为收缩压，亦称为高压。目标值：≤130mmHg" data-original-title="收缩压(SBP)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="BPH" name="user-name"  class="form-control" placeholder="≤130" style=" text-align:right" />
+                    <span class="input-group-addon">mmHg</span>
+                  </div>  <!-- /.col -->                                   
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">舒张压</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是心脏舒张末期，血液暂时停止射入动脉，而已流入动脉的血液靠血管壁的弹力和张力作用，继续流动，对血管壁仍有压力，这时的血压称作舒张压，亦称为低压。目标值：≤80mmHg" data-original-title="舒张压(DBP)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="BPL" name="user-name"  class="form-control" placeholder="≤80" style=" text-align:right" />
+                    <span class="input-group-addon">mmHg</span>
+                  </div>  <!-- /.col -->                                   
+                </div> <!-- /.form-group -->
+
+
+                <br /><br />
+                <h3 class="content-title"><u>血&nbsp;&nbsp;脂</u></h3>
+                <p></p>
+                <br /><br />
+  
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">总胆固醇</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是指血液中所有脂蛋白所含胆固醇之总和。目标值：≤4.5mmol/L(174mg/dl)" data-original-title="总胆固醇(Tch)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="Tch" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="TchUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="TchUnit1">mmol/L</a></li>
+                        <li><a id="TchUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 " style=" text-align:right">低密度脂蛋白胆固醇</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="能反映血液低密度脂蛋白总量。目标值：≤2.5mmol/L(97mg/dl)" data-original-title="低密度脂蛋白胆固醇(LDL-ch)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="LDLch" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="LDLchUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="LDLchUnit1">mmol/L</a></li>
+                        <li><a id="LDLchUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 " style=" text-align:right">高密度脂蛋白胆固醇</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="具有抗动脉粥样硬化作用。目标值：＞1.04mmol/L(40mg/dl)(女：＞1.30mmol/L(50mg/dl))" data-original-title="高密度脂蛋白胆固醇(HDL-ch)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="HDLch" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="HDLchUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="HDLchUnit1">mmol/L</a></li>
+                        <li><a id="HDLchUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 " style=" text-align:right">甘油三酯</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是血浆中各种脂蛋白中所反映甘油三酯的总和。目标值：≤1.5mmol/L(133mg/dl)" data-original-title="甘油三酯(TG)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="TG" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="TGUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="TGUnit1">mmol/L</a></li>
+                        <li><a id="TGUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <br /><br />
+                <h3 class="content-title"><u>肝肾功能</u></h3>
+                <p></p>
+                <br /><br />
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 " style=" text-align:right">尿酸</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="因为肥胖、胰岛素抵抗、高血压、高血脂、经常饮水过少等，身体无法将摄取的嘌呤进一步代谢成可以从肾脏经尿液排出的排泄物，因而这些物质最终会形成尿酸。并会引起痛风。目标值：≤426umol/L(7.2mg/dl)" data-original-title="尿酸(Ua)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="Ua" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="UaUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="UaUnit1">umol/L</a></li>
+                        <li><a id="UaUnit2">mg/dl</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 " style=" text-align:right">尿白蛋白/肌酐</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="是反应早期糖尿病肾病的指标。目标值：≤2.5mg/mmol(22mg/g)(女：≤3.5mg/mmol(31mg/g))" data-original-title="尿白蛋白/肌酐(Alb/Cr)"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="AlbCr" name="user-name"  class="form-control" style=" text-align:right" />
+                    <div class="input-group-btn">
+                      <button type="button" id="AlbCrUnit" class="btn btn-default dropdown-toggle" data-toggle="dropdown"></button>
+                      <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li><a id="AlbCrUnit1">mg/mmol</a></li>
+                        <li><a id="AlbCrUnit2">mg/g</a></li>
+                      </ul>
+                    </div>
+                  </div>  <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+
+                <br /><br />
+                <h3 class="content-title"><u>运动与体重</u></h3>
+                <p></p>
+                <br /><br />
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">运动</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="建议糖友参加中等强度（快走、打太极拳、汽车、打高尔夫球和园艺活动等）或稍高强度（舞蹈、有氧健身、慢跑、游泳和骑车上坡等）运动。每周运动至少150分钟，最好每天可以运动30分钟，切记不要一周只运动一次而且强度很大。" data-original-title="运动"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="Athlete" name="user-name"  class="form-control" placeholder="≥150" style=" text-align:right" />
+                    <span class="input-group-addon">分钟/周</span>
+                  </div>  <!-- /.col -->                                   
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-md-offset-1 col-sm-4 ">体重指数</label>
+                  <i class="fa fa-info-circle col-md-1 col-sm-1 form-control-static ui-popover" data-toggle="tooltip" data-placement="top" data-trigger="hover" data-content="体重指数（BMI）=体重（kg）/身高的平方（m2）。肥胖定义分类：体重指数在18.5以下为体重不足；18.5～22.9为体重正常；23～24.9为超重；25～29.9为肥胖；超过30为严重肥胖。" data-original-title="体重指数（BMI）"></i>
+                  <div class="col-md-4 col-sm-7  input-group" style="padding-right:15px; padding-left:15px">
+                    <input type="text" id="Weight" name="user-name"  class="form-control" placeholder="18.5≤BMI指数≤22.9" style=" text-align:right" />
+                    <span class="input-group-addon">&nbsp;kg/m2&nbsp;</span>
+                  </div>  <!-- /.col -->                                   
+                </div> <!-- /.form-group -->
+
+
+
+
+                <br /><br /><br />
+                <div class="form-group">
+                  <div class="col-md-4 col-md-offset-5 col-sm-5 col-sm-offset-7 ">
+                    <button type="button" class="btn btn-primary " id="SaveControlGoals">保&nbsp;&nbsp;存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveControlGoalsSuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="reset" class="btn btn-default">取&nbsp;&nbsp;消</button>
+                  </div> <!-- /.col -->
+                </div> <!-- /.form-group -->
+
+              </form>
+
+
+            </div> <!-- /.tab-pane -->
+
+
+
+            <div class="tab-pane fade" id="bloodsugarmonitorplan-tab">
+
+              <div class="portlet">
+
+              <h3 class="portlet-title">
+                 <u>血糖监测计划</u>
+              </h3>
+
+              <div class="form-group">
+                <div class="col-md-2 col-md-offset-10 col-sm-4 col-sm-offset-8 " style="padding-right:0;">
+                  <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#AddBSPlan"  style="float:right;">添加监测计划</button>
+                </div> <!-- /.col -->
+              </div> <!-- /.form-group -->
+              <br />
+              <br />
+            
+
+              <div class="portlet-body table-responsive">
+
+                <table class="table table-striped table-bordered" id="BSPlanTable" style="text-align:center">
+                  <thead>
+                    <tr>
+                      <th >UserID</th>
+                      <th >PlanID</th>
+                      <th >监测项目</th>
+                      <th >频率</th>
+                      <th >闹钟</th>
+                      <th >起效日期</th>
+                      <th >项目类型</th>
+                      <th >删除</th>
+                    </tr>
+                  </thead>
+
+@*                  <tfoot>
+                    <tr>
+                      <th>Browser</th>
+                      <th>Rendering engine</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                  </tfoot>*@
+                </table>
+              </div> <!-- /.portlet-body -->
+              </div>         
+            </div> <!-- /.tab-pane -->
+
+            <div id="AddBSPlan" class="modal modal-styled fade">
+
+              <div class="modal-dialog ">
+
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title">添加血糖监测计划</h3>
+                  </div> <!-- /.modal-header -->
+
+                  <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+
+                      <div class="form-group">
+                        <label for="BSProject" class="control-label col-sm-2 col-sm-offset-3">监测项目:</label>
+                        <div class="col-sm-4">
+                        <select class="form-control" id="BSProject">
+                          <option value="0">请选择</option>
+                          <option value="空腹血糖">空腹血糖</option>
+                          <option value="早餐后血糖">早餐后血糖</option>
+                          <option value="午餐前血糖">午餐前血糖</option>
+                          <option value="午餐后血糖">午餐后血糖</option>
+                          <option value="晚餐前血糖">晚餐前血糖</option>
+                          <option value="晚餐后血糖">晚餐后血糖</option>
+                          <option value="睡前血糖">睡前血糖</option>
+                          <option value="夜间血糖">夜间血糖</option>
+                          <option value="其他">其他</option>
+                        </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="BSFrequency" class="control-label col-sm-2 col-sm-offset-3">频&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;率:</label>
+                        <div class="col-sm-4">
+                        <select class="form-control" id="BSFrequency">
+                          <option value="0">请选择</option>
+                          <option value="仅一次">仅一次</option>
+                          <option value="1次/天">1次/天</option>
+                          <option value="1次/周">1次/周</option>
+                          <option value="1次/月">1次/月</option>
+                          <option value="1次/季度">1次/季度</option>
+                          <option value="1次/每年">1次/每年</option>
+                        </select>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="BSTime" class="control-label col-sm-2 col-sm-offset-3">闹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钟:</label>
+                        <div class="col-sm-4 input-group date form_time" data-data="" data-date-format="hh:ii" style="padding-right:15px; padding-left:15px">
+                          <input class="form-control" id="BSTime" type="text" readonly/>
+                          <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="BSDate" class="control-label col-sm-2 col-sm-offset-3">起效日期:</label>
+                        <div class="col-sm-4 input-group date form_date" data-data="" data-date-format="yyyy-mm-dd" style="padding-right:15px; padding-left:15px">
+                        <input class="form-control" id="BSDate" type="text" readonly/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                      </div>                   
+                    </form>
+                  </div> <!-- /.modal-body -->
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="SaveBSPlan">保存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveBSPlanSuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>                    
+                  </div> <!-- /.modal-footer -->
+
+                </div> <!-- /.modal-content -->
+
+              </div><!-- /.modal-dialog -->
+
+            </div><!-- /.modal -->
+
+
+            <div id="UpdateBSProject" class="modal modal-styled fade">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title">修改计划项目</h5>
+                  </div> <!-- /.modal-header -->
+
+                  <div class="modal-body">
+                  <form  role="form">
+                    <div class="form-group">
+                        <label for="NewBSProject" class="control-label ">新的计划项目:</label>
+                        <div>
+                        <select class="form-control" id="NewBSProject">
+                          <option value="0">请选择</option>
+                          <option value="空腹血糖">空腹血糖</option>
+                          <option value="早餐后血糖">早餐后血糖</option>
+                          <option value="午餐前血糖">午餐前血糖</option>
+                          <option value="午餐后血糖">午餐后血糖</option>
+                          <option value="晚餐前血糖">晚餐前血糖</option>
+                          <option value="晚餐后血糖">晚餐后血糖</option>
+                          <option value="睡前血糖">睡前血糖</option>
+                          <option value="夜间血糖">夜间血糖</option>
+                          <option value="其他">其他</option>
+                        </select>
+                      </div>
+                      </div>
+                  </form>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="SaveNewBSProject">保存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveNewBSProjectSuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>                    
+                  </div> <!-- /.modal-footer -->
+
+                </div>
+              </div>
+            
+            </div>
+
+
+
+
+
+
+
+
+            <div id="UpdateBSFrequency" class="modal modal-styled fade">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title">修改计划项目</h5>
+                  </div> <!-- /.modal-header -->
+
+                  <div class="modal-body">
+                  <form  role="form">
+                    <div class="form-group">
+                        <label for="NewBSFrequency" class="control-label ">新的频率:</label>
+                        <div>
+                        <select class="form-control" id="NewBSFrequency">
+                          <option value="0">请选择</option>
+                          <option value="仅一次">仅一次</option>
+                          <option value="1次/天">1次/天</option>
+                          <option value="1次/周">1次/周</option>
+                          <option value="1次/月">1次/月</option>
+                          <option value="1次/季度">1次/季度</option>
+                          <option value="1次/每年">1次/每年</option>
+                        </select>
+                      </div>
+                      </div>
+                  </form>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="SaveNewBSFrequency">保存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveNewBSFrequencySuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>                    
+                  </div> <!-- /.modal-footer -->
+
+                </div>
+              </div>
+            
+            </div>
+
+
+
+
+            <div id="UpdateBSTime" class="modal modal-styled fade">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title">修改闹钟</h5>
+                  </div> <!-- /.modal-header -->
+
+                  <div class="modal-body">
+                  <form  role="form">
+                    <div class="form-group "  >
+                        <label for="BSTime" class="control-label">闹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钟:</label>
+                        <div class="input-group date form_time" data-data="" data-date-format="hh:ii">
+                        <input class="form-control" id="NewBSTime" type="text" readonly/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                        </div>
+                      </div>
+                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="SaveNewBSTime">保存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveNewBSTimeSuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>                    
+                  </div> <!-- /.modal-footer -->
+
+                </div>
+              </div>
+            
+            </div>
+
+
+
+
+
+
+
+            <div id="UpdateBSDate" class="modal modal-styled fade">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 class="modal-title">修改起效日期</h5>
+                  </div> <!-- /.modal-header -->
+
+                  <div class="modal-body">
+                  <form  role="form">
+                    <div class="form-group">
+                        <label for="NewBSDate" class="control-label ">起效日期:</label>
+                        <div  class="input-group date form_date" data-data="" data-date-format="yyyy-mm-dd">
+                        <input class="form-control" id="NewBSDate" type="text" readonly/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                      </div>
+                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="SaveNewBSDate">保存</button>
+                    &nbsp;&nbsp;
+                    <span><i id="SaveNewBSDateSuccess" class='fa fa-check-circle' style="color:Green"></i></span>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>                    
+                  </div> <!-- /.modal-footer -->
+
+                </div>
+              </div>
+            
+            </div>
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="tab-pane fade" id="medicineplan-tab">
+
+              <h3 class="content-title"><u>Notification Settings</u></h3>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+
+              <br><br>
+
+              <form action="./page-settings.html" class="form form-horizontal">
+
+                <div class="form-group">
+
+                  <label class="col-md-3">Toggle Notifications</label>
+
+                  <div class="col-md-7">
+
+                    <div class="checkbox">
+                      <label>
+                      <input value="" type="checkbox" checked>
+                      Send me security emails
+                      </label>
+                    </div> <!-- /.checkbox -->
+
+                    <div class="checkbox">
+                      <label>
+                      <input value="" type="checkbox" checked>
+                      Send system emails
+                      </label>
+                    </div> <!-- /.checkbox -->
+
+                    <div class="checkbox">
+                      <label>
+                      <input value="" type="checkbox">
+                      Lorem ipsum dolor sit amet
+                      </label>
+                    </div> <!-- /.checkbox -->
+
+                    <div class="checkbox">
+                      <label>
+                      <input value="" type="checkbox">
+                      Laborum, quam iure quibusdam
+                      </label>
+                    </div> <!-- /.checkbox -->
+
+                  </div> <!-- /.col -->
+
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+
+                  <label class="col-md-3">Email for Notifications</label>
+
+                  <div class="col-md-7">
+                    <select name="email_notifications" class="form-control">
+                      <option value="1">john@mvpready.com</option>
+                      <option value="2">mary@mvpready.com</option>
+                      <option value="3">chris@mvpready.com</option>
+                    </select>
+                  </div> <!-- /.col -->
+
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group">
+
+                  <div class="col-md-7 col-md-push-3">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    &nbsp;
+                    <button type="reset" class="btn btn-default">Cancel</button>
+                  </div> <!-- /.col -->
+
+                </div> <!-- /.form-group -->
+
+              </form>
+
+            </div> <!-- /.tab-pane -->
+
+
+            <div class="tab-pane fade" id="foodplan-tab">
+
+              <h3 class="content-title"><u>Payments Settings</u></h3>
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+
+            </div> <!-- /.tab-pane -->
+
+            <div class="tab-pane fade" id="sportplan-tab">
+              <h3 class="content-title"><u>Reports Settings</u></h3>
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            </div> <!-- /.tab-pane -->
+
+
+            <div class="tab-pane fade" id="regularinspectplan-tab">
+              <h3 class="content-title"><u>Reports Settings</u></h3>
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            </div> <!-- /.tab-pane -->
+
+
+
+          </div> <!-- /.tab-content -->
+
+        </div> <!-- /.col -->
+
+      </div> <!-- /.row -->
+
+
+    </div> <!-- /.container -->
+
+  </div> <!-- .content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\bin\BootstrapTest.dll
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\bin\BootstrapTest.pdb
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\bin\EntityFramework.dll
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\bin\EntityFramework.xml
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\obj\Debug\BootstrapTest.dll
+c:\users\dqhl\documents\visual studio 2010\Projects\BootstrapTest\BootstrapTest\obj\Debug\BootstrapTest.pdb
+C:\Users\dqhl\Documents\Visual Studio 2010\Projects\BootstrapTest\BootstrapTest\obj\Debug\BootstrapTest.csprojResolveAssemblyReference.cache
